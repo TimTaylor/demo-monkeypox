@@ -1,0 +1,45 @@
+---
+title: "Demo report"
+author: "Tim Taylor"
+date: 2022-08-05
+abstract: |
+    [data](https://github.com/TimTaylor/demo-monkeypox/tree/main/data/raw),
+    [analysis code](https://github.com/TimTaylor/demo-monkeypox/tree/main/R),
+    [report code](https://github.com/TimTaylor/demo-monkeypox/tree/main/report/report.qmd)
+format:
+    html:
+        self-contained: true
+toc: true
+params:
+    cases: "../output/report-5-plot-1.svg"
+    regions: "../output/report-5-plot-2.svg"
+---
+
+# Introduction
+
+Lorem ipsum dolor sit amet, quam nec tellus eu sed vulputate, sit. Magnis sapien lacus ut at volutpat nec vel. Accumsan velit class ipsum litora, at diam taciti. Amet ridiculus odio nibh. Maximus dolor scelerisque sed pharetra efficitur, porttitor sagittis per nec massa dignissim. Auctor vel ut, magna dapibus, sed non amet. Libero sed sed cubilia cursus ac in malesuada ut mauris. Fringilla, felis ipsum nullam luctus erat. Eget ut penatibus id amet dignissim pharetra. Sed et facilisis sed, malesuada nec dolor! Velit nec tortor neque efficitur tincidunt tellus in mi velit eget. Euismod in fames aliquet nullam. Nunc et ut amet ex risus hendrerit et, eu in, sapien. Egestas consectetur egestas elementum. Feugiat massa auctor pulvinar sem. Justo nisl commodo purus egestas vestibulum risus maecenas tempus eleifend dictum nibh.
+
+# Analysis and results
+
+lorem ipsum dolor sit amet, turpis nibh maecenas maecenas et habitant. Etiam cum sodales ut parturient at sed! Nec augue porttitor. Nisi, dis nec sem amet amet mollis odio erat dictum diam euismod. Maximus ridiculus hac nec nunc libero. Risus nec tortor vivamus. Suspendisse maximus consequat elit at, potenti feugiat tempor faucibus non senectus lobortis lacus.
+
+```{r}
+#| echo: false
+#| label: fig-cases
+#| fig-cap: Incidence of confirmed and highly probable monkeypox cases by specimen date in England as of 29 July 2022
+knitr::include_graphics(params$cases)
+```
+
+Non et ut aliquam vel metus egestas eu. Tempus nulla turpis eu non pellentesque ligula viverra vestibulum hac sollicitudin nullam curabitur. Cras at dis, litora vitae non est massa senectus hendrerit eget. Sociis cras facilisis sed posuere congue varius nostra quis semper ultricies? Auctor non neque nec ad conubia curabitur, in dignissim hac. Hac et vel in senectus torquent. Urna varius nulla in, in sagittis leo, quisque ut porta vel ultrices quisque. Eu cursus, augue tempor, mauris eu. Justo metus quam malesuada nostra ex dolor. Nulla ac donec non ut faucibus vulputate erat quis mauris. Aenean duis risus nec ut tortor viverra condimentum. Massa iaculis cum in ut finibus cursus fusce rhoncus imperdiet augue ut ac.
+
+```{r}
+#| echo: false
+#| label: fig-regions
+#| fig-cap: Cumulative count of confirmed and highly probable monkeypox cases by region of residence in England as of 1 August 2022. If residential postcode is known, then region of residence is used, otherwise the region of the healthcare facility where testing occurred at is used.
+knitr::include_graphics(params$regions)
+```
+
+# Conclusion
+Lorem ipsum dolor sit amet, tincidunt tortor ridiculus quam arcu taciti, potenti convallis purus et ut. Ac dui, morbi vel. Quis mi, etiam mauris, in dignissim in sit. Quis sollicitudin libero. Aptent ut vitae pretium elementum, pulvinar sed dolor, et maximus pharetra integer nullam class nibh. Quis tristique. Amet eu dolor felis et fringilla purus. Aptent ac quis felis nec et et quam ipsum. Amet ullamcorper mi imperdiet, sit quis, sed neque. Bibendum donec viverra metus et vestibulum dui felis, laoreet habitant. Urna sed a ipsum duis est volutpat. Semper sociosqu erat aliquam nulla, morbi pharetra. Sed varius phasellus suspendisse donec hendrerit sed! Suspendisse, sociosqu pretium est donec in at pharetra. Magna, eu, augue urna, finibus a id ligula id.
+
+Ut massa sit pellentesque eget commodo. Volutpat varius sociis tellus, id hac facilisi et. Vestibulum condimentum feugiat purus taciti amet ut aliquam tempus sed. Est cum, euismod venenatis in neque. Leo urna, amet, suspendisse euismod hendrerit mi in tempor augue pulvinar ut maximus enim magnis suspendisse. Arcu tempus, amet penatibus est pretium sapien in quis. Litora mollis elit pretium consectetur ex. Tincidunt sed lacinia libero donec venenatis erat metus porttitor. Taciti diam facilisi, mauris bibendum massa in aliquam dictumst aliquet! Venenatis metus tortor vel quam.
