@@ -3,9 +3,7 @@ title: "Demo report"
 author: "Tim Taylor"
 date: 2022-08-05
 abstract: |
-    [data](https://github.com/TimTaylor/demo-monkeypox/tree/main/data/raw),
-    [analysis code](https://github.com/TimTaylor/demo-monkeypox/tree/main/R),
-    [report code](https://github.com/TimTaylor/demo-monkeypox/tree/main/report/report.qmd)
+    A dummy report based on snippets of the [fifth technical briefing](https://www.gov.uk/government/publications/monkeypox-outbreak-technical-briefings/investigation-into-monkeypox-outbreak-in-england-technical-briefing-5) on the monkeypox outbreak. [Data](https://github.com/TimTaylor/demo-monkeypox/tree/main/data/raw), and [code](https://github.com/TimTaylor/demo-monkeypox).
 format:
     html:
         self-contained: true

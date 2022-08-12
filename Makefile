@@ -1,22 +1,18 @@
-.PHONY: get-data
-
 # -------------------------------------------------------------------------
 # SETUP -------------------------------------------------------------------
 # -------------------------------------------------------------------------
+.PHONY: data plots report
 
 # directories
-REFDIR ?= .
+REFDIR := .
 RAWDIR := ${REFDIR}/data/raw
 CLEANDIR := ${REFDIR}/data/clean
 OUTDIR := ${REFDIR}/output
+REPORTDIR := ${REFDIR}/report
 
-# urls
+# url and raw/clean data files
 URL := https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1096606/monkeypox-outbreak-technical-briefing-5-data-england-5-august-2022.ods
-
-# raw data files
 RAWDAT := ${RAWDIR}/$(notdir ${URL})
-
-# clean data files
 CLEANDAT := $(basename ${CLEANDIR}/$(notdir ${RAWDAT})).xls
 
 # -------------------------------------------------------------------------
@@ -36,6 +32,7 @@ ${RAWDAT}:
 	mkdir -p $(@D)
 	wget -c -O $@ ${URL}
 
+
 # -------------------------------------------------------------------------
 # convert to xls ----------------------------------------------------------
 # -------------------------------------------------------------------------
@@ -43,24 +40,37 @@ ${CLEANDAT}: ${RAWDAT}
 	soffice --convert-to xls $< --outdir $(@D) --headless
 
 
-get-data: ${CLEANDAT}
+data: ${CLEANDAT}
+
 
 # -------------------------------------------------------------------------
-# report ------------------------------------------------------------------
+# plots -------------------------------------------------------------------
 # -------------------------------------------------------------------------
 ${OUTDIR}/report-5-plot-1.svg: R/report-5-plot-1.R ${CLEANDAT}
 	${MKDIR}
 	${RS}
 
-${OUTDIR}/report-5-plot-2.svg: R/report-5-plot-2.R ${CLEANDAT5}
+${OUTDIR}/report-5-plot-2.svg: R/report-5-plot-2.R ${CLEANDAT}
 	${MKDIR}
 	${RS}
 
+plots: ${OUTDIR}/report-5-plot-1.svg ${OUTDIR}/report-5-plot-2.svg
+
+
+# -------------------------------------------------------------------------
+# report ------------------------------------------------------------------
+# -------------------------------------------------------------------------
 report/report.html: report/report.qmd ${OUTDIR}/report-5-plot-1.svg ${OUTDIR}/report-5-plot-2.svg
 	quarto render $< -P cases:../${OUTDIR}/report-5-plot-1.svg
 	xdg-open $@
 
+report: report/report.html
 
 
-
-
+# -------------------------------------------------------------------------
+# cleanup -----------------------------------------------------------------
+# -------------------------------------------------------------------------
+clean:
+	rm -f output/*
+	rm -f data/clean/*
+	rm -f report/report.html
