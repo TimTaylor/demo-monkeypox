@@ -1,7 +1,7 @@
 ---
 title: "Demo report"
 author: "Tim Taylor"
-date: 2022-08-05
+date: 2022-08-12
 abstract: |
     A dummy report based on snippets of the [fifth technical briefing](https://www.gov.uk/government/publications/monkeypox-outbreak-technical-briefings/investigation-into-monkeypox-outbreak-in-england-technical-briefing-5) on the monkeypox outbreak. [Data](https://github.com/TimTaylor/demo-monkeypox/tree/main/data/raw), and [code](https://github.com/TimTaylor/demo-monkeypox).
 format:
@@ -24,7 +24,7 @@ lorem ipsum dolor sit amet, turpis nibh maecenas maecenas et habitant. Etiam cum
 ```{r}
 #| echo: false
 #| label: fig-cases
-#| fig-cap: Incidence of confirmed and highly probable monkeypox cases by specimen date in England as of 29 July 2022
+#| fig-cap: Incidence of confirmed and highly probable monkeypox cases by specimen date in England as of 4 August 2022
 knitr::include_graphics(params$cases)
 ```
 

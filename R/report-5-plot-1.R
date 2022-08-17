@@ -23,7 +23,7 @@ library(svglite)
 # -------------------------------------------------------------------------
 
 # load data
-dat <- read_xls(path = infile, range = "A4:B149", sheet = "Fig1", col_names = TRUE)
+dat <- read_xls(path = infile, range = "A4:B153", sheet = "Fig1", col_names = TRUE)
 
 # replace spaces with underscore and make lower case
 names(dat) <- gsub(pattern = " ", replacement = "_", x = tolower(names(dat)), fixed = TRUE)

@@ -4,8 +4,8 @@
 .PHONY: data plots report
 
 # container
-CONTAINER = monkeypox
-CONTAINERDIR := /${CONTAINER}
+CONTAINER = monkeypox:latest
+CONTAINERDIR := /monkeypox
 
 # directories
 REFDIR := .
@@ -15,7 +15,7 @@ OUTDIR := ${REFDIR}/output
 REPORTDIR := ${REFDIR}/report
 
 # url and raw/clean data files
-URL := https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1096606/monkeypox-outbreak-technical-briefing-5-data-england-5-august-2022.ods
+URL := https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1097861/monkeypox-outbreak-technical-briefing-5-data-england-5-august-2022v2.ods
 RAWDAT := ${RAWDIR}/$(notdir ${URL})
 CLEANDAT := ${CLEANDIR}/$(basename $(notdir ${RAWDAT})).xls
 
