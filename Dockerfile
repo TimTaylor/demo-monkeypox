@@ -7,11 +7,6 @@ ARG GIT_COMMIT=unspecified
 
 FROM registry.fedoraproject.org/fedora:$VERSION
 
-LABEL org.label-schema.license="GPL-2.0" \
-      org.label-schema.vcs-url="https://github.com/TimTaylor/demo-monkeypox" \
-      maintainer="Tim Taylor <timothy.taylor@ukhsa.gov.uk>" \
-      git_commit=$GIT_COMMIT
-
 RUN echo "install_weak_deps=False" >> /etc/dnf/dnf.conf \
     && dnf -y upgrade && dnf -y install R wget libreoffice-calc && dnf -y clean all
 
@@ -46,5 +41,10 @@ RUN wget -q https://github.com/quarto-dev/quarto-cli/releases/download/v1.0.38/q
     && ln -s /opt/quarto-1.0.38/bin/quarto /usr/local/bin/quarto
 
 WORKDIR /monkeypox
+
+LABEL org.label-schema.license="GPL-2.0" \
+      org.label-schema.vcs-url="https://github.com/TimTaylor/demo-monkeypox" \
+      maintainer="Tim Taylor <timothy.taylor@ukhsa.gov.uk>" \
+      git_commit=$GIT_COMMIT
 
 CMD ["bash"]
