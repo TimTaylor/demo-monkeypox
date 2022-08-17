@@ -3,9 +3,10 @@ A demo repository to illustrate a version controlled and containerised approach
 for archiving reports:
 
 - Coordinated via [Make](https://www.gnu.org/software/make/).
-- Containers, managed via [podman](https://docs.podman.io/en/latest/), are used
-  for the analysis runtime and generation of report output.
-- Git used for version control.
+- [Containers](https://en.wikipedia.org/wiki/OS-level_virtualization), managed
+  via [podman](https://docs.podman.io/en/latest/), are used for the analysis
+  runtime and generation of report output.
+- [Git](https://git-scm.com/) used for version control.
 - [Container](https://github.com/TimTaylor/demo-monkeypox/pkgs/container/monkeypox/35977654?tag=latest),
   [source](https://github.com/TimTaylor/demo-monkeypox) and
   [output](https://timtaylor.github.io/demo-monkeypox/) all hosted using GitHub
