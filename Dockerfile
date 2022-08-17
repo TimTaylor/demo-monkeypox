@@ -3,11 +3,14 @@
 # GPL-2.0
 
 ARG VERSION=36
+ARG GIT_COMMIT=unspecified
+
 FROM registry.fedoraproject.org/fedora:$VERSION
 
 LABEL org.label-schema.license="GPL-2.0" \
       org.label-schema.vcs-url="https://github.com/TimTaylor/demo-monkeypox" \
-      maintainer="Tim Taylor <timothy.taylor@ukhsa.gov.uk>"
+      maintainer="Tim Taylor <timothy.taylor@ukhsa.gov.uk>" \
+      git_commit=$GIT_COMMIT
 
 RUN echo "install_weak_deps=False" >> /etc/dnf/dnf.conf \
     && dnf -y upgrade && dnf -y install R wget libreoffice-calc && dnf -y clean all
