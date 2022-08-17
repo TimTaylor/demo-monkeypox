@@ -4,8 +4,8 @@
 .PHONY: data plots report
 
 # container
-CONTAINER = monkeypox:v1.0
-CONTAINERDIR := /monkeypox
+CONTAINER = monkeypox
+CONTAINERDIR := /${CONTAINER}
 
 # directories
 REFDIR := .
