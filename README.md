@@ -1,6 +1,6 @@
 # Overview
 A demo repository to illustrate a version controlled and containerised approach
-for the archiving reports:
+for archiving reports:
 
 - Coordinated via [Make](https://www.gnu.org/software/make/).
 - Containers, managed via [podman](https://docs.podman.io/en/latest/), are used
