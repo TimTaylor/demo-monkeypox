@@ -65,7 +65,7 @@ plots: ${OUTDIR}/report-5-plot-1.svg ${OUTDIR}/report-5-plot-2.svg
 # -------------------------------------------------------------------------
 # report ------------------------------------------------------------------
 # -------------------------------------------------------------------------
-report/report.html: report/report.qmd plots
+report/report.html: report/report.qmd ${OUTDIR}/report-5-plot-1.svg ${OUTDIR}/report-5-plot-2.svg
 	${PODMAN} quarto render $< -P cases:../${OUTDIR}/report-5-plot-1.svg
 	xdg-open $@
 
