@@ -35,7 +35,7 @@ git checkout -f v1.0
 make report
 
 # current report
-git checkout -f v1.1
+git checkout -f v1.2
 make report
 
 ```
