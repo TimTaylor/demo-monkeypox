@@ -29,7 +29,7 @@ MKDIR = mkdir -p $(@D)
 # use podman and mount volume
 PODMAN = podman run --rm -v ${REFDIR}:${CONTAINERDIR}:z ${CONTAINER}
 
-# run Rscript (${RS} myscript.R myinput1 myinput2 etc etc)
+# run Rscript (${RS} = Rscript --vanilla myscript.R myinput1 myinput2 myoutput)
 RS = Rscript --vanilla $^ $@
 
 # -------------------------------------------------------------------------
