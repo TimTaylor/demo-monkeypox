@@ -19,7 +19,7 @@ In an empty directory
 git clone https://github.com/TimTaylor/demo-monkeypox.git
 
 # pull the container from the registry
-docker pull ghcr.io/timtaylor/monkeypox:latest
+podman pull ghcr.io/timtaylor/monkeypox:latest
 
 # enter cloned repo
 cd demo-monkeypox
